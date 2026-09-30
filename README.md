@@ -3,5 +3,5 @@
 personal portfolio built with react, vite, and tailwind css.
 showcases projects in cybersecurity tooling and full-stack web development.
 
-**stack:** react (vite) · tailwind css · lucide icons · vercel
+**stack:** react (vite) · tailwind css · lucide icons · cloudflare
 **live:** https://arhamkhan.pages.dev
