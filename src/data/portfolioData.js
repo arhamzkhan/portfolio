@@ -1,7 +1,7 @@
 export const portfolioData = {
   profile: {
     name: "Arham Khan",
-    handle: "arhamzkhan",
+    handle: "dev-arhamkhan",
     role: "ics student, lahore",
     bio: "i build security tools and real-world software people actually use.",
     location: "lahore, pakistan",
@@ -16,7 +16,7 @@ export const portfolioData = {
       stack: ["react", "vercel serverless", "supabase"],
       links: {
         demo: "https://trysecurescan.vercel.app",
-        github: "https://github.com/arhamzkhan/securescan"
+        github: "https://github.com/dev-arhamkhan/securescan"
       },
       isPublic: true
     },
@@ -28,7 +28,7 @@ export const portfolioData = {
       stack: ["react", "github tarball api", "supabase"],
       links: {
         demo: "https://trysecretguard.vercel.app",
-        github: "https://github.com/arhamzkhan/secretguard"
+        github: "https://github.com/dev-arhamkhan/secretguard"
       },
       isPublic: true
     },
@@ -41,9 +41,9 @@ export const portfolioData = {
       stack: ["react", "full-stack saas", "discreet gateway"],
       links: {
         demo: "https://tryourstory.vercel.app",
-        github: "https://github.com/arhamzkhan/ourstory"
+        github: "https://github.com/dev-arhamkhan/ourstory"
       },
-      isPublic: false
+      isPublic: true
     },
     {
       id: "sanctuary",
@@ -60,8 +60,8 @@ export const portfolioData = {
   socials: [
     {
       platform: "github",
-      username: "github.com/arhamzkhan",
-      url: "https://github.com/arhamzkhan"
+      username: "github.com/dev-arhamkhan",
+      url: "https://github.com/dev-arhamkhan"
     },
     {
       platform: "instagram",

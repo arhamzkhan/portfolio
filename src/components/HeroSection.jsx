@@ -29,7 +29,7 @@ export default function HeroSection() {
           view projects &rarr;
         </a>
         <a
-          href="https://github.com/arhamzkhan"
+          href="https://github.com/dev-arhamkhan"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-neutral-200 transition-colors"
