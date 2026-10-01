@@ -3,60 +3,73 @@ export const portfolioData = {
     name: "Arham Khan",
     handle: "dev-arhamkhan",
     role: "ics student, lahore",
-    bio: "i build security tools and real-world software people actually use.",
+    bio: "ics student in lahore, building practical software with a focus on web development, cybersecurity, and ai-assisted development.",
     location: "lahore, pakistan",
     skillsSummary: "react, vite, tailwind css, vercel serverless, postgresql (supabase), cybersecurity auditing, ai workflows"
   },
-  projects: [
-    {
-      id: "securescan",
-      name: "securescan",
-      tagline: "website privacy & security auditor",
-      description: "instant audit of security headers (csp, hsts, x-frame-options), cookie security, and third-party trackers.",
-      stack: ["react", "vercel serverless", "supabase"],
-      links: {
-        demo: "https://trysecurescan.vercel.app",
-        github: "https://github.com/dev-arhamkhan/securescan"
+  projects: {
+    main: [
+      {
+        id: "securescan",
+        name: "securescan",
+        tagline: "website privacy & security auditor",
+        description: "see what a website exposes about its visitors, privacy, and security.",
+        stack: ["react", "vercel serverless", "supabase"],
+        links: {
+          demo: "https://trysecurescan.vercel.app",
+          github: "https://github.com/dev-arhamkhan/securescan"
+        },
+        isPublic: true
       },
-      isPublic: true
-    },
-    {
-      id: "secretguard",
-      name: "secretguard",
-      tagline: "git secret leak detector",
-      description: "scans public github repositories for accidentally committed secrets (api tokens, aws keys) via github's tarball api.",
-      stack: ["react", "github tarball api", "supabase"],
-      links: {
-        demo: "https://trysecretguard.vercel.app",
-        github: "https://github.com/dev-arhamkhan/secretguard"
+      {
+        id: "secretguard",
+        name: "secretguard",
+        tagline: "git secret leak detector",
+        description: "find exposed passwords, API keys, and other secrets hidden inside a codebase.",
+        stack: ["react", "github tarball api", "supabase"],
+        links: {
+          demo: "https://trysecretguard.vercel.app",
+          github: "https://github.com/dev-arhamkhan/secretguard"
+        },
+        isPublic: true
       },
-      isPublic: true
-    },
-    {
-      id: "ourstory",
-      name: "ourstory",
-      tagline: "private shared relationship saas",
-      description: "private full-stack saas application for tracking shared milestones, memories, and relationship insights with discreet routing.",
-      note: "private saas project to showcase full-stack architecture without public source code.",
-      stack: ["react", "full-stack saas", "discreet gateway"],
-      links: {
-        demo: "https://tryourstory.vercel.app",
-        github: "https://github.com/dev-arhamkhan/ourstory"
+      {
+        id: "ourstory",
+        name: "ourstory",
+        tagline: "shared relationship timeline",
+        description: "shared timeline for memories, milestones, and moments",
+        stack: ["react", "full-stack saas"],
+        links: {
+          demo: "https://tryourstory.vercel.app",
+          github: "https://github.com/dev-arhamkhan/ourstory"
+        },
+        isPublic: true
       },
-      isPublic: true
-    },
-    {
-      id: "sanctuary",
-      name: "sanctuary",
-      tagline: "private messaging space",
-      description: "a private space for two people to talk, securely.",
-      note: "private / in development.",
-      stack: ["react", "full-stack"],
-      // TODO: add screenshots + link later
-      links: {},
-      isPublic: false
-    }
-  ],
+      {
+        id: "sanctuary",
+        name: "sanctuary",
+        tagline: "private messaging space",
+        description: "a private space for two people to talk, securely.",
+        note: "private / in development.",
+        stack: ["react", "full-stack"],
+        links: {},
+        isPublic: false
+      }
+    ],
+    comingSoon: [
+      {
+        id: "proposalos",
+        name: "proposalos",
+        tagline: "proposal & workspace engine",
+        description: "Interactive proposal-to-approval workspace for agencies and freelancers.",
+        status: "COMING SOON",
+        stack: ["prototype / in development"],
+        links: {},
+        isPublic: false
+      }
+    ],
+    archive: []
+  },
   socials: [
     {
       platform: "github",
@@ -73,5 +86,9 @@ export const portfolioData = {
       username: "dev.arhamkhan@gmail.com",
       url: "mailto:dev.arhamkhan@gmail.com"
     }
-  ]
+  ],
+  privacyAndTerms: {
+    status: "prepared",
+    analyticsPolicy: "privacy-conscious aggregate analytics ready (no tracking scripts / no fingerprinting)"
+  }
 };

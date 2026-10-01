@@ -14,8 +14,15 @@ export default function ProjectModal({ project, onClose }) {
         </div>
 
         <div className="space-y-3 font-sans text-xs">
-          <div>
-            <h3 className="font-mono text-sm font-bold text-neutral-100">{project.name}</h3>
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <h3 className="font-mono text-sm font-bold text-neutral-100">{project.name}</h3>
+              {project.status && (
+                <span className="text-[10px] font-mono text-amber-400 border border-amber-500/30 px-1.5 py-0.5 rounded bg-amber-500/10">
+                  {project.status}
+                </span>
+              )}
+            </div>
             <p className="text-neutral-400 mt-1">{project.description}</p>
           </div>
 
@@ -56,7 +63,9 @@ export default function ProjectModal({ project, onClose }) {
               </a>
             )}
             {!project.links?.demo && !project.links?.github && (
-              <span className="text-neutral-600 font-mono text-[11px]">links hidden</span>
+              <span className="text-neutral-600 font-mono text-[11px]">
+                {project.status === 'COMING SOON' ? 'coming soon' : 'links hidden'}
+              </span>
             )}
           </div>
 

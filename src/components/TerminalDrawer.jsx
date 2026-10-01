@@ -5,10 +5,16 @@ export default function TerminalDrawer({ isOpen, onClose }) {
   const [input, setInput] = useState('');
   const [history, setHistory] = useState([
     { type: 'sys', text: 'arham quiet terminal' },
-    { type: 'sys', text: 'commands: whoami, projects, securescan, secretguard, ourstory, socials, clear, exit' }
+    { type: 'sys', text: 'commands: whoami, projects, securescan, secretguard, ourstory, proposalos, socials, clear, exit' }
   ]);
   const bottomRef = useRef(null);
   const inputRef = useRef(null);
+
+  const allProjects = [
+    ...(portfolioData.projects.main || []),
+    ...(portfolioData.projects.comingSoon || []),
+    ...(portfolioData.projects.archive || [])
+  ];
 
   useEffect(() => {
     if (isOpen) {
@@ -41,7 +47,7 @@ export default function TerminalDrawer({ isOpen, onClose }) {
     } else if (cmd === 'help') {
       newLogs.push({
         type: 'out',
-        text: 'whoami, projects, securescan, secretguard, ourstory, socials, clear, exit'
+        text: 'whoami, projects, securescan, secretguard, ourstory, proposalos, socials, clear, exit'
       });
     } else if (cmd === 'whoami') {
       newLogs.push({
@@ -51,14 +57,14 @@ export default function TerminalDrawer({ isOpen, onClose }) {
     } else if (cmd === 'projects' || cmd === 'ls') {
       newLogs.push({
         type: 'out',
-        text: portfolioData.projects.map((p) => `${p.id}: ${p.tagline}`).join('\n')
+        text: allProjects.map((p) => `${p.id}: ${p.tagline} ${p.status ? `[${p.status}]` : ''}`).join('\n')
       });
-    } else if (cmd === 'securescan' || cmd === 'secretguard' || cmd === 'ourstory') {
-      const p = portfolioData.projects.find((item) => item.id === cmd);
+    } else if (cmd === 'securescan' || cmd === 'secretguard' || cmd === 'ourstory' || cmd === 'proposalos' || cmd === 'sanctuary') {
+      const p = allProjects.find((item) => item.id === cmd);
       if (p) {
         newLogs.push({
           type: 'out',
-          text: `${p.name}: ${p.description}\nstack: ${p.stack.join(', ')}\ndemo: ${p.links.demo}`
+          text: `${p.name}: ${p.description}\nstack: ${p.stack.join(', ')}${p.links?.demo ? `\ndemo: ${p.links.demo}` : ''}`
         });
       }
     } else if (cmd === 'socials') {
