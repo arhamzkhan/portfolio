@@ -3,7 +3,7 @@ export const portfolioData = {
     name: "Arham Khan",
     handle: "dev-arhamkhan",
     role: "ics student, lahore",
-    bio: "ics student in lahore, building practical software with a focus on web development, cybersecurity, and ai-assisted development.",
+    bio: "i build security tools and real-world software people actually use.",
     location: "lahore, pakistan",
     skillsSummary: "react, vite, tailwind css, vercel serverless, postgresql (supabase), cybersecurity auditing, ai workflows"
   },
