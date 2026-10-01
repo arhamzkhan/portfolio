@@ -38,7 +38,7 @@ export const portfolioData = {
         name: "ourstory",
         tagline: "shared relationship timeline",
         description: "shared timeline for memories, milestones, and moments",
-        stack: ["react", "full-stack saas"],
+        stack: ["react", "full-stack web app"],
         links: {
           demo: "https://tryourstory.vercel.app",
           github: "https://github.com/dev-arhamkhan/ourstory"

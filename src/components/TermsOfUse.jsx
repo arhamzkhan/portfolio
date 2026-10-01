@@ -17,7 +17,7 @@ export default function TermsOfUse({ onNavigate }) {
         <div>
           <h1 className="text-xl font-mono font-bold text-neutral-100 mb-2">Terms of Use</h1>
           <p className="text-xs font-mono text-neutral-500">
-            last updated: {new Date().getFullYear()}
+            last updated: September 30, 2026
           </p>
         </div>
 
