@@ -59,7 +59,7 @@ export default function TerminalDrawer({ isOpen, onClose }) {
         type: 'out',
         text: allProjects.map((p) => `${p.id}: ${p.tagline} ${p.status ? `[${p.status}]` : ''}`).join('\n')
       });
-    } else if (cmd === 'securescan' || cmd === 'secretguard' || cmd === 'ourstory' || cmd === 'proposalos' || cmd === 'sanctuary') {
+    } else if (allProjects.some((p) => p.id === cmd)) {
       const p = allProjects.find((item) => item.id === cmd);
       if (p) {
         newLogs.push({

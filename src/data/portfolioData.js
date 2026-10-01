@@ -66,9 +66,30 @@ export const portfolioData = {
         stack: ["prototype / in development"],
         links: {},
         isPublic: false
+      },
+      {
+        id: "unsaid",
+        name: "unsaid",
+        tagline: "communication analysis experiment",
+        description: "an experimental tool for separating what was said from what was assumed.",
+        status: "COMING SOON",
+        stack: ["experimental / in development"],
+        links: {},
+        isPublic: false
       }
     ],
-    archive: []
+    archive: [
+      {
+        id: "slotly",
+        name: "slotly",
+        tagline: "salon booking platform",
+        description: "salon appointment booking platform",
+        status: "archived · no longer active",
+        stack: ["archived"],
+        links: {},
+        isPublic: false
+      }
+    ]
   },
   socials: [
     {

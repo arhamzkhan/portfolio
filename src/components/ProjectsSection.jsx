@@ -124,33 +124,47 @@ export default function ProjectsSection({ onSelectProject }) {
       </div>
 
       {/* 3. ARCHIVE */}
-      <div className="space-y-4 pt-4 border-t border-neutral-900/60">
+      <div className="space-y-6 pt-4 border-t border-neutral-900/60">
         <div className="flex items-center justify-between font-mono text-xs text-neutral-500 pb-1 border-b border-neutral-900/60">
           <span>$ ls ./projects/archive</span>
-          <span className="text-[10px] uppercase text-neutral-600 font-mono tracking-wider">
+          <span className="text-[10px] uppercase text-neutral-600 font-mono tracking-wider font-semibold">
             archive
           </span>
         </div>
 
-        {archive && archive.length > 0 ? (
-          <div className="space-y-8">
-            {archive.map((project) => (
-              <div key={project.id} className="space-y-2 group">
-                <div className="flex items-baseline justify-between gap-4 font-mono text-sm">
-                  <span className="font-bold text-neutral-400">{project.name}</span>
-                  <span className="text-[10px] text-neutral-600 font-mono">[archived]</span>
+        <div className="space-y-8">
+          {archive.map((project) => (
+            <div key={project.id} className="space-y-2 group">
+              <div className="flex items-baseline justify-between gap-4 font-mono text-sm">
+                <div className="flex items-center gap-2">
+                  <span className="font-bold text-neutral-300 group-hover:text-neutral-100 transition-colors">
+                    {project.name}
+                  </span>
+                  <span className="text-[10px] text-neutral-500 font-mono border border-neutral-800 px-1.5 py-0.5 rounded bg-neutral-900/40">
+                    {project.status || 'archived · no longer active'}
+                  </span>
                 </div>
-                <p className="font-sans text-xs text-neutral-500 leading-relaxed">
-                  {project.description}
-                </p>
+
+                <div className="flex items-center gap-3 text-xs text-neutral-400">
+                  <button
+                    onClick={() => onSelectProject(project)}
+                    className="text-neutral-500 hover:text-neutral-300 transition-colors text-xs"
+                  >
+                    details
+                  </button>
+                </div>
               </div>
-            ))}
-          </div>
-        ) : (
-          <div className="font-mono text-xs text-neutral-600 py-1">
-            // empty archive placeholder
-          </div>
-        )}
+
+              <p className="font-sans text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                {project.description}
+              </p>
+
+              <div className="font-mono text-[11px] text-neutral-500">
+                {project.stack.join(' • ')}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
