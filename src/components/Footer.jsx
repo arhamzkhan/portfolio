@@ -1,9 +1,18 @@
 import React from 'react';
 
+const STORAGE_KEY = 'analytics-consent';
+
 export default function Footer({ onNavigate }) {
   const handleNav = (e, path) => {
     e.preventDefault();
     onNavigate(path);
+  };
+
+  const resetConsent = (e) => {
+    e.preventDefault();
+    localStorage.removeItem(STORAGE_KEY);
+    // Reload so ConsentGate re-runs its logic and shows the banner
+    window.location.reload();
   };
 
   return (
@@ -16,6 +25,15 @@ export default function Footer({ onNavigate }) {
           className="hover:text-neutral-400 transition-colors"
         >
           Privacy
+        </a>
+        <span>&middot;</span>
+        <a
+          href="#"
+          onClick={resetConsent}
+          className="hover:text-neutral-400 transition-colors"
+          title="Change your analytics cookie preference"
+        >
+          Cookie settings
         </a>
         <span>&middot;</span>
         <a

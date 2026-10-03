@@ -9,6 +9,7 @@ import ProjectModal from './components/ProjectModal';
 import TerminalDrawer from './components/TerminalDrawer';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfUse from './components/TermsOfUse';
+import ConsentGate from './components/ConsentGate';
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -71,6 +72,7 @@ export default function App() {
 
       <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
       <TerminalDrawer isOpen={terminalOpen} onClose={() => setTerminalOpen(false)} />
+      <ConsentGate />
     </div>
   );
 }
